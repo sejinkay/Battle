@@ -5,7 +5,3 @@ ruby '2.6.0'
   gem 'shotgun'
   gem 'capybara'
   gem 'selenium-webdriver'
-
-group :test, :development do
-  gem 'rspec'
-end
