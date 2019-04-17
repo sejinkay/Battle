@@ -18,3 +18,11 @@ feature 'Players HP' do
    expect(page).to have_content "Luke's HP: 100"
  end
 end
+
+feature 'Player1 can attack player2' do
+ scenario 'show confirmation that player1 can attack' do
+   sign_in_play
+   click_button('Attack')
+   expect(page).to have_content "Leia attacked Luke!"
+ end
+end
