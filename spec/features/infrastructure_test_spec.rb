@@ -14,3 +14,13 @@ feature 'Players names' do
    expect(page).to have_content "Leia vs Luke"
  end
 end
+
+feature 'Players HP' do
+ scenario 'check player2s HP' do
+   visit('/')
+   fill_in('player1', with: 'Leia')
+   fill_in('player2', with: 'Luke')
+   click_button('Submit')
+   expect(page).to have_content "Luke's HP: 100"
+ end
+end
