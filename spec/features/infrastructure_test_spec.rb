@@ -15,7 +15,7 @@ end
 feature 'Players HP' do
  scenario 'check player2s HP' do
    sign_in_play
-   expect(page).to have_content "Luke's HP: 100"
+   expect(page).to have_content "Luke's HP: 200"
  end
 end
 
@@ -25,4 +25,12 @@ feature 'Player1 can attack player2' do
    click_button('Attack')
    expect(page).to have_content "Leia attacked Luke!"
  end
+end
+
+feature 'Players HP' do
+  scenario 'Reduces player2s HP by 10' do
+    sign_in_play
+    click_button('Attack')
+    expect(page).to have_content('Luke\'s HP: 190')
+  end
 end
