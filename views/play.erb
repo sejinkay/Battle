@@ -1,8 +1,8 @@
-<h1><%= @player1 %> vs <%= @player2 %></h1>
+<h1><%= @player1.name %> vs <%= @player2.name %></h1>
 
-<h2><%= @player2 %>'s HP: <%= @player2_HP %></h2>
+<h2><%= @player2.name %>'s HP: <%= @player2_HP %></h2>
 <br>
-<h1>You can attack <%= @player2 %>!</h1>
+<h1>You can attack <%= @player2.name %>!</h1>
 <form action = "/attack" method = "post"><div>
 <input type = "submit" value = "Attack">
 </div></form>

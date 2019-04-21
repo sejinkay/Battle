@@ -9,9 +9,9 @@ describe Player do
     end
   end
 
-  describe 'attack' do
+  describe '#get_attacked' do
     it 'reduces players HP by 10' do
-      expect{ leia.attack(luke) }.to change{ luke.HP }.by -10
+      expect{ luke.get_attacked }.to change{ luke.HP }.by -10
     end
   end
 end
