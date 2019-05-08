@@ -4,9 +4,6 @@ require_relative 'lib/game'
 
 class Battle < Sinatra::Base
   enable :sessions
-#   get '/' do
-#    "Testing infrastructure working!"
-#  end
 
   get '/' do
     erb(:index)
