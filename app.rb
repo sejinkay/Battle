@@ -27,7 +27,16 @@ class Battle < Sinatra::Base
     @player2 = session[:player2]
     Game.new.attack(@player2)
     @player2_HP = session[:player2].HP
+    if @player2_HP < 0
+      redirect to('/result')
+    end
     erb(:attack)
+  end
+
+  get '/result' do
+    @player1 = session[:player1]
+    @player2 = session[:player2]
+    erb(:result)
   end
 
  run! if app_file == $0

@@ -12,6 +12,9 @@
   --secondary-orange: #feada6;
 }
 
+html, body {
+  overscroll-behavior: none;
+}
 
 body {
   font-family: Inter;
@@ -63,4 +66,8 @@ a:hover {
 .button:hover {
   background-color: pink;
   color: white;
+}
+
+.box {
+  margin-left: 40px;
 }

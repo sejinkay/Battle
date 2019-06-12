@@ -1,10 +1,3 @@
-# feature 'Testing infrastructure' do
-#  scenario 'checks what homepage says' do
-#    visit('/')
-#    expect(page).to have_content "Testing infrastructure working!"
-#  end
-# end
-
 feature 'Players names' do
  scenario 'expects players to fill in their names then see it' do
    sign_in_play
@@ -32,5 +25,14 @@ feature 'Players HP' do
     sign_in_play
     click_button('Attack')
     expect(page).to have_content('Luke\'s HP: 190')
+  end
+end
+
+feature 'Result Message' do
+  scenario 'See the result message when player HP is 0' do
+    sign_in_play
+    click_button('Attack')
+    20.times { click_button('Keep Attack') }
+    expect(page).to have_content('Luke is DEAD! Leia won!')
   end
 end
